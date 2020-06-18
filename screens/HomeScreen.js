@@ -11,6 +11,7 @@ import {
 import { ScrollView } from "react-native-gesture-handler";
 
 import { MonoText } from "../components/StyledText";
+import TimePicker from "../components/TimePicker";
 
 export default function HomeScreen() {
   return (
@@ -32,9 +33,8 @@ export default function HomeScreen() {
 
         <View style={styles.getStartedContainer}>
           <DevelopmentModeNotice />
-
+          <TimePicker />
           <Text style={styles.getStartedText}>22:10</Text>
-
           <View
             style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
           >
@@ -94,6 +94,8 @@ function DevelopmentModeNotice() {
     );
   }
 }
+
+// function Clock() {}
 
 function handleLearnMorePress() {
   WebBrowser.openBrowserAsync(
