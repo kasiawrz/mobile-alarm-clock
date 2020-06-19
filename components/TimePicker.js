@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import { View, Text, Picker, StyleSheet } from "react-native";
+import React, { useState } from 'react';
+import {
+  View, Text, Picker, StyleSheet,
+} from 'react-native';
 
 export default function TimePicker(hours = true) {
-  const [selectedValue, setSelectedValue] = useState("java");
+  const [selectedValue, setSelectedValue] = useState('java');
   //   const MINUTES = 59;
   const MAX = hours ? 24 : 60;
   const pickerValues = [];
@@ -10,16 +12,16 @@ export default function TimePicker(hours = true) {
   function generateValues() {
     for (let i = 0; i < MAX; i++) {
       console.log(
-        "debug📍: TimePicker 13",
-        `<Picker.Item key=${i} label={i} value={i}></Picker.Item>`
+        'debug📍: TimePicker 13',
+        `<Picker.Item key=${i} label={i} value={i}></Picker.Item>`,
       );
       pickerValues.push(
-        <Picker.Item key={i} label={i} value={i}></Picker.Item>
+        <Picker.Item key={i} label={i} value={i} />,
       );
     }
   }
   generateValues();
-  console.log("debug📍: TimePicker 22", pickerValues);
+  console.log('debug📍: TimePicker 22', pickerValues);
 
   return (
     <View style={styles.container}>
@@ -51,10 +53,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 40,
-    alignItems: "center",
+    alignItems: 'center',
     height: 200,
     width: 200,
     // color: "red",
-    backgroundColor: "pink",
+    backgroundColor: 'pink',
   },
 });

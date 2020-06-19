@@ -1,5 +1,5 @@
-import * as WebBrowser from "expo-web-browser";
-import * as React from "react";
+import WebBrowser from "expo-web-browser";
+import React from "react";
 import {
   Image,
   Platform,
@@ -86,13 +86,12 @@ function DevelopmentModeNotice() {
         useful development tools. {learnMoreButton}
       </Text>
     );
-  } else {
-    return (
-      <Text style={styles.developmentModeText}>
-        You are not in development mode: your app will run at full speed.
-      </Text>
-    );
   }
+  return (
+    <Text style={styles.developmentModeText}>
+      You are not in development mode: your app will run at full speed.
+    </Text>
+  );
 }
 
 // function Clock() {}

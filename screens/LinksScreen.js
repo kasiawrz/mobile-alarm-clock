@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
-import * as WebBrowser from 'expo-web-browser';
-import * as React from 'react';
+import WebBrowser from 'expo-web-browser';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
 
@@ -29,7 +29,9 @@ export default function LinksScreen() {
   );
 }
 
-function OptionButton({ icon, label, onPress, isLastOption }) {
+function OptionButton({
+  icon, label, onPress, isLastOption,
+}) {
   return (
     <RectButton style={[styles.option, isLastOption && styles.lastOption]} onPress={onPress}>
       <View style={{ flexDirection: 'row' }}>
